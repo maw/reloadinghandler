@@ -15,7 +15,6 @@ def do_GET(real_handler):
     real_handler.wfile.write(gravy())
     return
 
-
 class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def __init__(self, request, client_address, server):
         SimpleHTTPServer.SimpleHTTPRequestHandler.__init__(self, request, client_address, server)
