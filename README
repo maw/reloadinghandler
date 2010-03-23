@@ -17,7 +17,8 @@ TODO:
 * MyHandler is currently kind of ugly in how it's structured.  Clean
   it up.  Ideally, it'd be necessary to provide just one class.
 
-* Make it work with Python 3.
+* Make it work with Python 3.  It shouldn't be hard at all, but I
+  haven't tried yet.
 
 
 
