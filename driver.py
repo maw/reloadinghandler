@@ -12,7 +12,9 @@ import ReloadingHandler
 def main(args):
     PORT = 8000
     
-    # Tell the reloading handler which real handler it should call into.
+    # Tell the reloading handler which module contains the  real handler into
+    # which it should call.  The module in question needs to provide a 
+    # a function handler() which returns your handling class.
     ReloadingHandler.real_module = MyHandler
     
     SocketServer.ThreadingTCPServer.allow_reuse_address = True
@@ -33,4 +35,3 @@ def main(args):
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
     pass
-
