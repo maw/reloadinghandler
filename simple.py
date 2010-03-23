@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import BaseHTTPServer
 import SimpleHTTPServer
 import SocketServer
 import socket
@@ -20,7 +19,7 @@ def main(args):
     ## When you're developing and testing
     httpd = SocketServer.ThreadingTCPServer(('localhost', PORT),
                                             ReloadingHandler.handler())
-    # For production
+    ## For production
     #httpd = SocketServer.ThreadingTCPServer(('localhost', PORT),
     #                                        MyHandler.MyHandler)
     
