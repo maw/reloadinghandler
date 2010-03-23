@@ -12,6 +12,8 @@ or benchmarking, only a simple change is necessary.
 driver.py is a simple example of how to use the ReloadingHandler, and
 MyHandler.py is a simple handler module/class.
 
+The source is available at github: http://github.com/maw/reloadinghandler.
+
 TODO:
 
 * Make it work with Python 3.  It shouldn't be hard at all, but I
