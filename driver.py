@@ -12,6 +12,7 @@ import ReloadingHandler
 def main(args):
     PORT = 8000
     
+    # Tell the reloading handler which real handler it should call into.
     ReloadingHandler.real_module = MyHandler
     
     SocketServer.ThreadingTCPServer.allow_reuse_address = True
