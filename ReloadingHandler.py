@@ -18,12 +18,14 @@ class reloading_handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         # for key in sys.modules.keys():
         #     reload(sys.modules[key])
         reload(self.__module)
-        
-    # Other methods, as necessary, will look like this.
+        pass
+    
+    # Other methods, as necessary, will look much like this one.
     def do_GET(self):
         self.__reload()
         self.__module.do_GET(self)
-        
+        pass
+    
     def __init__(self, request, client_address, server):
         try:
             self.__module = real_module
@@ -31,13 +33,13 @@ class reloading_handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         except TypeError, te:
             print "Failed to load module ", `self.__module`, ": ", `te`
             # XXX: Anything possible other than just bailing here?
-            # XXX: Should we bail at all?
+            # XXX: For that matter, should we bail at all?
             sys.exit(1)
             pass
         
         SimpleHTTPServer.SimpleHTTPRequestHandler.__init__(self, request, client_address, server)
         pass
     
-
+    
 def handler():
     return reloading_handler

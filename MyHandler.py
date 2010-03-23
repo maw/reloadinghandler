@@ -7,6 +7,8 @@ from urlparse import urlparse
 def gravy():
     return 'hello dude'
 
+# The real meat of a handler.  It gets its own function for now, but I'd like to
+# fix this eventually.
 def do_GET(real_handler):
     print "In the real do_GET"
     real_handler.send_response(200)
@@ -15,6 +17,7 @@ def do_GET(real_handler):
     real_handler.wfile.write(gravy())
     return
 
+# When you're not debugging you can use this handler directly.
 class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def __init__(self, request, client_address, server):
         SimpleHTTPServer.SimpleHTTPRequestHandler.__init__(self, request, client_address, server)
