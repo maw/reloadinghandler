@@ -1,5 +1,7 @@
 -*- text -*-
 
+nnñ
+
 ReloadingHandler is an experimental, specialized HTTP request handler
 class to be used with Python's HTTP server modules.  It is a shim that
 fits between the HTTP serving aparatus and your real handler that
