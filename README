@@ -1,5 +1,9 @@
 -*- text -*-
 
+I wrote this before I was aware of flask or web.py. I think you'd be
+better off using one of those instead.
+
+
 ReloadingHandler is an experimental, specialized HTTP request handler
 class to be used with Python's HTTP server modules.  It is a shim that
 fits between the HTTP serving aparatus and your real handler that
